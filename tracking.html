@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking | Budge-It Tracker</title>
+
+    <meta name="color-scheme" content="light dark"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="budge-it-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+    <main>
+
+        <article>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="7">Budge-It Tracker</th>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Payment Method</th>
+                        <th>Recurring</th>
+                        <!-- <th>Notes</th> -->
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="date" name="date" required></td>
+                        <td><input type="text" name="description" placeholder="Description/Notes" required></td>
+                        <td>$ <input type="number" step="0.01" name="amount" required></td>
+                        <td>
+                            <select name="category" required>
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="groceries">Groceries</option>
+                                <option value="utilities">Utilities</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="payment-method" required>
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="cash">Cash</option>
+                                <option value="credit-card">Credit Card</option>
+                                <option value="debit-card">Debit Card</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="recurring" required>
+                                <option value="" disabled selected>Choose option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="balance" readonly></td>
+                        <td><button type="button" id="addRowButton">Add</button></td>
+                    </tr>
+
+                    
+                    <!-- <tr>
+                        
+                        <td>2023-10-01</td>
+                        
+                        <td>Groceries</td>
+                        
+                        <td>$50.00</td>
+                        
+                        <td></td>
+                        
+                        <td></td>
+                        
+                        <td></td>
+                        
+                        <td></td>
+                        
+                        
+                    </tr> -->
+                    
+                </tbody>
+            </table>
+
+        </article>
+
+        
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+</body>
+<script src="nav.js"></script>
+<script src="addRow.js"></script>
+</html>
