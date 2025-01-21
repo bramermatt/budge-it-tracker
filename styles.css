@@ -1,0 +1,90 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: system-ui;
+}
+
+nav {
+    padding: 1rem;
+    max-width: 200rem;
+    position: fixed;
+    border-right: thin solid;
+    height: 100vh;
+    float: left;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 1vw; */
+
+    img {
+        max-height: 10vh;
+        /* max-width: 8vw; */
+        /* object-fit: fill; */
+        border-radius: 10px;
+    }
+
+    ul#navLinks, ul#loginLinks {
+        list-style-type: none;
+        padding: .5em 0;
+
+        li, li a {
+            margin: .5em 0;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            gap: .5vw;
+        }
+    }
+
+}
+
+main {
+    padding: 1rem;
+    margin-left: 8rem;
+    /* margin-right: 1rem; */
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+
+    border-collapse: collapse;
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: 0 auto;
+
+    thead {
+        position: sticky;
+        top: 0px;
+        z-index: 1  ;
+    }
+    
+    th {
+        border: thin solid;
+        padding: 1em;
+
+    }
+
+    tr {
+        padding: .5em;
+
+    }
+
+    input:invalid {
+
+        border: 2px solid red;
+    
+    }
+
+    tr input {
+        width: 95%;
+    }
+
+    td {
+        padding: .5em;
+        border: thin solid;
+    }
+}
