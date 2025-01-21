@@ -25,22 +25,33 @@ nav {
 
     ul#navLinks, ul#loginLinks {
         list-style-type: none;
-        padding: .5em 0;
+        /* padding: .5em 0; */
 
         li, li a {
-            margin: .5em 0;
+            /* margin: .5em 0; */
+            padding: .5em;
+            border-radius: 10px;
             text-decoration: none;
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: .5vw;
+            color: var(--text);
+
+            .active, a:hover {
+                background-color: lightgrey;
+                color: black;
+            }
         }
     }
 
 }
 
+
+
 main {
     padding: 1rem;
-    margin-left: 8rem;
+    margin-left: 10rem;
     /* margin-right: 1rem; */
     overflow-x: scroll;
 }
@@ -52,6 +63,7 @@ main {
 table {
 
     border-collapse: collapse;
+    text-align: left;
     /* max-width: 1200px; */
     width: 100%;
     margin: 0 auto;
@@ -59,13 +71,12 @@ table {
     thead {
         position: sticky;
         top: 0px;
-        z-index: 1  ;
+        z-index: 1;;
     }
     
     th {
         border: thin solid;
-        padding: 1em;
-
+        padding: .5em;
     }
 
     tr {
@@ -80,11 +91,42 @@ table {
     }
 
     tr input {
-        width: 95%;
+        max-width: 100%;
     }
 
     td {
         padding: .5em;
         border: thin solid;
     }
+}
+
+
+@media screen and (max-width: 800px) {
+    nav {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+        border-right: none;
+        flex-direction: row;
+        display: flex;
+        float: none;
+        overflow: none;
+
+        img {
+            max-height: 6vh;
+        }
+
+        ul#navLinks, ul#loginLinks {
+            display: flex;
+            flex-direction: row;
+            gap: 0vw;
+            padding: 0;
+        }        
+    }
+
+    main {
+        margin-left: 0;
+        padding: 2em;
+    }
+    
 }

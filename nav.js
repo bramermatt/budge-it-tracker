@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     </ul>
 
     <ul id="navLinks">
-        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li><a href="#"><i class="fa-solid fa-bars-staggered"></i> Tracking</a></li>
+        <li><a href="index.html" class="${currentPath.endsWith('index.html') ? 'active' : ''}"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="tracking.html" class="${currentPath.endsWith('tracking.html') ? 'active' : ''}"><i class="fa-solid fa-bars-staggered"></i> Tracking</a></li>
         <!-- <li><a href="#"><i class="fa-solid fa-coins"></i> Budget</a></li>
         <li><a href="#"><i class="fa-solid fa-money-bill-trend-up"></i> Dashboard</a></li>
         <li><a href="#"><i class="fa-solid fa-chart-line"></i> Reports</a></li> -->
     </ul>
     </nav>
-    `
+    `;
 
     document.body.insertAdjacentHTML('afterbegin', navHTML);
 
